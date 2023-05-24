@@ -1,6 +1,10 @@
 <?php 
 function produkSearch($keyword){
-	$query="SELECT * FROM `produk` WHERE nama_produk LIKE '%$keyword%' OR kode_produk LIKE '%$keyword%' ORDER BY `nama_produk` ASC";
+	$query="SELECT * FROM `produk` 
+    WHERE nama_produk 
+    LIKE '%$keyword%' 
+    OR kode_produk LIKE '%$keyword%' 
+    ORDER BY `nama_produk` ASC";
 	return query($query);
 }
 function sortPrice_ASC(){
