@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 12:42 PM
+-- Generation Time: May 24, 2023 at 09:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,6 +30,27 @@ WHERE `produk`.`stok`
 BETWEEN '0' AND '10'$$
 
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `fullname` varchar(60) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `fullname`, `username`, `password`) VALUES
+(1, 'Pero Kristovic', 'admin', 'admin'),
+(2, 'Roberto Kristovic', 'super-admin', 'super-admin');
 
 -- --------------------------------------------------------
 
@@ -163,7 +184,7 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `kode_produk`, `nama_produk`, `harga`, `stok`) VALUES
-(1, 'EC2-CW', 'ZOWIE EC2-CW Wireless Mouse - Gaming Mouse', 2890000, 11),
+(1, 'EC2-CW', 'Zowie EC2-CW Wireless Mouse - Gaming Mouse', 2890000, 11),
 (2, 'R-DAV3', 'Razer Deathadder V3 - Gaming Mouse', 1249000, 14),
 (3, 'R-OV2', 'Razer Orochi V2 Quartz Edition', 999000, 7),
 (4, 'RX-DX4', 'Rexus Daxa Air 4 ', 849000, 12),
@@ -173,6 +194,12 @@ INSERT INTO `produk` (`id`, `kode_produk`, `nama_produk`, `harga`, `stok`) VALUE
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pelanggan`
@@ -211,6 +238,12 @@ ALTER TABLE `produk`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
