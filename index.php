@@ -84,12 +84,16 @@ if (isset($_POST["sortName_DESC"])) {
   <hr>
   <form action="" method="post">
     <p>
+      <a href="login.php"><button type="button">Admin Login <i class="fa fa-sign-in"></i></button></a> 
+    </p>
+  </form>
+  <form action="" method="post">
+    <p>
       <input type="text" name="keyword" placeholder="Cari Produk..." autocomplete="off" required>
       <button type="submit" name="search"><i class="fa fa-search" aria-hidden="true"></i> Cari</button>
       <button onClick="window.location.href=window.location.href"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button>
     </p>
   </form>
-  
   <form action="" method="post">
     <p>
       Sorting nama produk
@@ -205,7 +209,7 @@ if (isset($_POST["sortName_DESC"])) {
   <article>
     <h3>Berberapa user dengan hak akses</h3>
     <p>(User admin memiliki akses CRUD pada database) <br>
-      Silakan gunakan tabel dibawah ini untuk username & password login kedalam sistem</p>
+      Silakan gunakan tombol login pada bagian atas awal halaman atau <a href="index.php" style="text-decoration: none; color:blue;"> klik disini</a> untuk melihat <br> username & password para admin yang terdaftar pada sistem</p>
   </article>
 </body>
 

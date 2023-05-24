@@ -31,4 +31,25 @@ function sortName_DESC(){
 	$query="SELECT * FROM `produk` ORDER BY `nama_produk` DESC";
 	return query($query);
 }
+function databaseInsert($data){
+	global $connection;
+
+	$kode_produk=htmlspecialchars($data["kode_produk"]);
+	$nama_produk=htmlspecialchars($data["nama_produk"]);
+	$harga_temp=htmlspecialchars($data["harga"]);
+	$harga=str_replace(',','.',str_replace('.','',$harga_temp));
+	settype($harga, "integer");
+	$stok=htmlspecialchars($data["stok"]);
+
+	$query="INSERT INTO `produk` (`id`, `kode_produk`, `nama_produk`, `harga`, `stok`) 
+	VALUES (NULL, '$kode_produk', '$nama_produk', '$harga', '$stok');";
+	mysqli_query($connection, $query);
+	return mysqli_affected_rows($connection);
+}
+function databaseDelete($id){
+	global $connection;
+
+	mysqli_query($connection, "DELETE FROM produk WHERE id=$id");
+	return mysqli_affected_rows($connection);
+}
 ?>
