@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once('db-connection.php');
-include('db-query.php');
-include('db-function.php'); ?>
+<?php include_once('function/db-connection.php');
+include('function/db-query.php');
+include('function/db-function.php'); ?>
 
 <head>
   <meta charset="UTF-8" />
@@ -84,7 +84,7 @@ if (isset($_POST["sortName_DESC"])) {
   <hr>
   <form action="" method="post">
     <p>
-      <a href="login.php"><button type="button">Admin Login <i class="fa fa-sign-in"></i></button></a> 
+      <a href="function/login.php"><button type="button">Admin Login <i class="fa fa-sign-in"></i></button></a> 
     </p>
   </form>
   <form action="" method="post">
@@ -144,14 +144,14 @@ if (isset($_POST["sortName_DESC"])) {
   <article>
     <h3>Entitas Database </h3>
     <p>(Memiliki 5 tabel yang saling terkait dengan kolom masing-masing tabel adalah 5)</p>
-    <img src="bnsp_database_designer.png" alt="">
+    <img src="assets/bnsp_database_designer.png" alt="">
   </article>
   <hr>
   <article>
     <h3>Procedure </h3>
     <p>(Untuk mengecek stok produk yang kurang dari 10)</p>
-    <img src="bnsp_procedure.png" alt=""> <br>
-    <img src="bnsp_call.png" alt="">
+    <img src="assets/bnsp_procedure.png" alt=""> <br>
+    <img src="assets/bnsp_call.png" alt="">
   </article>
   <hr>
   <article>
@@ -162,17 +162,17 @@ if (isset($_POST["sortName_DESC"])) {
   <article>
     <h3>Trigger </h3>
     <p>(Otomatis mengubah nilai stok produk jika ada penjualan dengan produk tersebut) <br> Trigger pada tabel `penjualan_detail` untuk update tabel `produk`</p>
-    <img src="bnsp_trigger.png" alt="">
+    <img src="assets/bnsp_trigger.png" alt="">
   </article>
   <hr>
   <article>
     <h3> Commit dan Rollback </h3>
     <p>(Digunakan untuk melakukan backup data sebelum melakukan interaksi terhadap database. <br>
       jika terjadi kesalahan dapat melakukan rollback untuk mengembalikan database seperti saat commit dijalankan)</p>
-    <img src="bnsp_commit_and_rollback_1.png" alt="">
+    <img src="assets/bnsp_commit_and_rollback_1.png" alt="">
     <p>Gunakan transaction untuk melakukan commit dan rollback <br> Dapat dilihat ada 6 produk sebelum commit dilakukan dan ada berberapa produk yang dihapus <br>
       pada tabel terlihat bahwa hanya tersisa 3 produk yang ada didalam tabel</p>
-    <img src="bnsp_commit_and_rollback_2.png" alt="">
+    <img src="assets/bnsp_commit_and_rollback_2.png" alt="">
     <p>Dapat dilihat sebelum rollback dilakukan pada tabel produk hanya ada 3 produk. <br>
       Namun setelah rollback dilakukan tabel produk kembali seperti semula dengan 6 produk didalamnya</p>
   </article>
@@ -180,22 +180,22 @@ if (isset($_POST["sortName_DESC"])) {
   <article>
     <h3>Algoritma sorting dan searching</h3>
     <p>(Fitur sorting dan searching dapat digunakan pada awal halaman berada diatas tabel) <br>Algoritma sorting dan searching menggunakan koneksi database dari PHP dengan query yang sesuai</p>
-    <img src="bnsp_sorting.png" alt="">
+    <img src="assets/bnsp_sorting.png" alt="">
     <p>Fitur sorting sesuai dengan tombol yang digunakan</p>
-    <img src="bnsp_searching.png" alt="">
+    <img src="assets/bnsp_searching.png" alt="">
     <p>Fitur searching untuk pencarian menggunakan nama/kode produk</p>
   </article>
   <hr>
   <article>
     <h3>Perintah eksekusi query SQL</h3>
     <p>(Perintah query SQL dilakukan oleh file 'db-query.php' yang membutuhkan sambungan dari file 'db-connection.php')</p>
-    <img src="bnsp-query-sql.png" alt="">
+    <img src="assets/bnsp-query-sql.png" alt="">
   </article>
   <hr>
   <article>
     <h3>Koneksi database ke aplikasi</h3>
     <p>(Koneksi menggunakan PHP dengan menggunakan fungsi `mysqli_connect`)</p>
-    <img src="bnsp-connection.png" alt="">
+    <img src="assets/bnsp-connection.png" alt="">
   </article>
   <hr>
   <article>

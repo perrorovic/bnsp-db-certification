@@ -92,7 +92,7 @@ if (isset($_POST["auth_check"])) {
         <label for="password">Password: </label>
         <input type="password" name="password" placeholder="Password..." required>
         <br><br>
-        <a href="index.php"><button type="button">Kembali</button></a> <button name="auth_check">Login <i class="fa fa-sign-in"></i></button>
+        <a href="../index.php"><button type="button">Kembali</button></a> <button name="auth_check">Login <i class="fa fa-sign-in"></i></button>
     </form>
     <br>
     <hr>
