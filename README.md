@@ -1,8 +1,15 @@
 # BNSP - FR.IA.02.
 
-Date : 2023-05-22 <br>
-Event : IT TELKOM PWT_7_2023  <br>
-TUK : ST3 TELKOM PURWOKERTO  <br>
 Schema : SKM/0317/00010/2/2019/15-Pemrogram Basis Data  <br>
-Participant : TUK-003.001100  <br>
-Assessor : Sisilia Thya Safitri  <br>
+Participant : TUK-003.001100  <br><br>   
+
+Homepage : index.php <br><br>
+
+Database Name : bnsp <br>
+Database File : bnsp.sql <br>
+Database Connection : function/db-function.php <br><br>
+
+Start xampp and import the database file (bnsp.sql) into the same name (bnsp) and put all the branch file (unpack from .zip or .rar that you choose to download as) in xampp/htdocs folder and use the browser localhost url to navigate to the homepage or copy this url (http://127.0.0.1/bnsp-db-certification/index.php)
+
+
+
