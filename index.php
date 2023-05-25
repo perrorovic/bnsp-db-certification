@@ -156,7 +156,8 @@ if (isset($_POST["sortName_DESC"])) {
   <hr>
   <article>
     <h3>Function </h3>
-    <p>(Pencarian produk dengan nama/kode produk dan Sorting mengenai produk diatas tabel list produk)</p>
+    <p>Pencarian produk dengan nama/kode produk dan Sorting mengenai produk diatas tabel list produk menggunakan PHP<br>
+    Dan fungsi insert yang digunakan pada pemasukan data kedalam tabel dari mySQL dengan bantuan PHP</p>
   </article>
   <hr>
   <article>
